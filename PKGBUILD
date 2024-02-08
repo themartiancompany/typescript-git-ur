@@ -17,10 +17,15 @@ url="http://www.${_pkgname}lang.org"
 license=('Apache')
 depends=('nodejs')
 makedepends=(
+  'dprint'
   'npm'
   'rsync')
-provides=("${_pkgname}")
-conflicts=("${_pkgname}")
+provides=(
+  "${_pkgname}"
+)
+conflicts=(
+  "${_pkgname}"
+)
 source=(
   # This source tree is very large
   "git+https://github.com/microsoft/${_name}"
